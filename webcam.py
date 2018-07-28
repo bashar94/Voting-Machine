@@ -10,7 +10,7 @@ while True:
         print(value)
 
     if(len(value) < 3):
-        cam = cv2.VideoCapture(1) #for default laptop camera 0, external webcam 1, for choose -1
+        cam = cv2.VideoCapture(-1) #for default laptop camera 0, external webcam 1, for choose -1
         ret, frame = cam.read()
         img_name = "voter_{}.png".format(value)
         cv2.imwrite(img_name, frame)
